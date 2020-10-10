@@ -9,8 +9,9 @@
   </thead>
   <tbody>
   <tr *ngFor="let entity of data, let i = index">
-    <td
-      *ngFor="let entityCol of settings['entityCols']">{{entity[entityCol.property]}}</td>
+    <td *ngFor="let entityCol of settings['entityCols']">
+      {{entity[entityCol.property]}}
+    </td>
     <td *ngFor="let classCol of settings['classCols']"
         [ngSwitch]="classCol.type">
       <div *ngSwitchCase="'button'">
