@@ -1,1 +1,27 @@
-<p>table works!</p>
+<table>
+  <thead>
+  <tr>
+    <th *ngFor="let entityCol of settings['entityCols']">
+      {{entityCol.title}}
+    </th>
+    <th *ngFor="let classCol of settings['classCols']">{{classCol.title}}</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let entity of data, let i = index">
+    <td
+      *ngFor="let entityCol of settings['entityCols']">{{entity[entityCol.property]}}</td>
+    <td *ngFor="let classCol of settings['classCols']"
+        [ngSwitch]="classCol.type">
+      <div *ngSwitchCase="'button'">
+        <button *ngFor="let action of classCol['values']"
+                (click)="action.execute(i)">{{action.name}}
+        </button>
+      </div>
+      <div *ngSwitchCase="'text'">
+        <span *ngFor="let text of classCol['values']">{{text}}</span>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>
