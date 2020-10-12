@@ -1,22 +1,22 @@
 <table>
   <thead>
   <tr>
-    <th *ngFor="let entityCol of settings['entityCols']">
+    <th *ngFor="let entityCol of config['entityCols']">
       {{entityCol.title}}
     </th>
-    <th *ngFor="let classCol of settings['classCols']">{{classCol.title}}</th>
+    <th *ngFor="let classCol of config['classCols']">{{classCol.title}}</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let entity of data, let i = index">
-    <td *ngFor="let entityCol of settings['entityCols']">
+    <td *ngFor="let entityCol of config['entityCols']">
       {{entity[entityCol.property]}}
     </td>
-    <td *ngFor="let classCol of settings['classCols']"
+    <td *ngFor="let classCol of config['classCols']"
         [ngSwitch]="classCol.type">
       <div *ngSwitchCase="'button'">
-        <button *ngFor="let action of classCol['values']"
-                (click)="action.execute(i)">{{action.name}}
+        <button *ngFor="let action of classCol['actions']"
+                (click)="action.do(i)">{{action.name}}
         </button>
       </div>
       <div *ngSwitchCase="'text'">
