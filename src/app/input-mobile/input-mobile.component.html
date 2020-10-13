@@ -1,0 +1,9 @@
+<input
+  [(ngModel)]="inputModel"
+  #inputMobile="ngModel"
+  (ngModelChange)="inputModelChange.emit($event)"
+  type="tel"
+  [pattern]="inputPattern || ''"
+  [placeholder]="inputPlaceholder || ''"
+  [ngClass]="{'red-border-class': inputMobile.errors?.pattern}"
+>
