@@ -1,1 +1,7 @@
-<p>input-mobile works!</p>
+<input
+  [(ngModel)]="inputModel"
+  (ngModelChange)="inputModelChange.emit($event)"
+  type="tel"
+  [pattern]="inputPattern"
+  [placeholder]="inputPlaceholder"
+>
