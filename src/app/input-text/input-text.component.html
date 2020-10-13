@@ -1,1 +1,5 @@
-<p>input-text works!</p>
+<input
+  [(ngModel)]="inputModel"
+  (ngModelChange)="inputModelChange.emit($event)"
+  type="text"
+>
