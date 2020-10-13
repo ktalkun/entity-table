@@ -1,3 +1,7 @@
-<button (click)="buttonClick.emit()" [disabled]="isDisabled">
+<button
+  (click)="buttonClick.emit()"
+  [disabled]="isDisabled"
+  [ngClass]="{'button-disabled': isDisabled}"
+>
   <ng-content></ng-content>
 </button>
