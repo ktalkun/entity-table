@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-input-mobile',
@@ -6,6 +6,10 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./input-mobile.component.css']
 })
 export class InputMobileComponent implements OnInit {
+  @Input() inputModel: string;
+  @Input() inputPlaceholder: string;
+  @Input() inputPattern: string;
+  @Output() inputModelChange = new EventEmitter<string>();
 
   constructor() {
   }
