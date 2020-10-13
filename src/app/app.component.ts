@@ -1,4 +1,7 @@
 import {Component} from '@angular/core';
+import {TableConfig} from "./table/model/table-config.model";
+import {EntityColumnType} from "./table/model/entity-column-type.model";
+import {ClassColumnType} from "./table/model/class-column-type.model";
 
 @Component({
   selector: 'app-root',
@@ -6,31 +9,31 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  tableSettings: object = {
+  tableSettings: TableConfig = {
     entityCols: [
       {
         property: 'name',
         title: 'Name',
-        type: 'text'
+        type: EntityColumnType.Text
       },
       {
         property: 'surname',
         title: 'Surname',
-        type: 'text'
+        type: EntityColumnType.Text
       },
       {
         property: 'phone',
         title: 'Phone',
-        type: 'tel'
+        type: EntityColumnType.Phone
       },
       {
         property: 'gender',
         title: 'Gender',
-        type: 'select',
-        config: {
-          false: 'Male',
-          true: 'Female',
-        }
+        type: EntityColumnType.Select,
+        values: [
+          'Male',
+          'Female'
+        ]
       }
     ],
 
@@ -38,36 +41,15 @@ export class AppComponent {
       {
         property: 'action',
         title: 'Actions',
-        type: 'button',
-        values: [
-          {
-            name: 'Edit',
-            execute: (rowNum: number) => {
-              return rowNum;
-            }
-          },
+        type: ClassColumnType.Button,
+        actions: [
           {
             name: 'Del',
-            execute: (rowNum: number) => {
+            do: (rowNum: number) => {
               this.tableData.splice(rowNum, 1);
             }
           }
         ]
-      }
-    ],
-
-    values: [
-      {
-        name: 'Edit',
-        execute: (rowNum: number) => {
-          return rowNum;
-        }
-      },
-      {
-        name: 'Del',
-        execute: (rowNum: number) => {
-          this.tableData.splice(rowNum, 1);
-        }
       }
     ],
   };
