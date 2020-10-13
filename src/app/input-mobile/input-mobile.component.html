@@ -2,6 +2,6 @@
   [(ngModel)]="inputModel"
   (ngModelChange)="inputModelChange.emit($event)"
   type="tel"
-  [pattern]="inputPattern"
-  [placeholder]="inputPlaceholder"
+  [pattern]="inputPattern || ''"
+  [placeholder]="inputPlaceholder || ''"
 >
