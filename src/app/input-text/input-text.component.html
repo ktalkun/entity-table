@@ -2,4 +2,5 @@
   [(ngModel)]="inputModel"
   (ngModelChange)="inputModelChange.emit($event)"
   type="text"
+  [placeholder]="inputPlaceholder || ''"
 >
