@@ -57,13 +57,19 @@ export class AppComponent {
     {
       name: 'Kirill',
       surname: 'Tolkun',
-      phone: '+375293271542',
+      phone: '375(2911)3271542',
       gender: 'Male'
     },
     {
       name: 'Kirill1',
       surname: 'Tolkun',
       phone: '+375293271542',
+      gender: 'Male'
+    },
+    {
+      name: 'Kirill1',
+      surname: 'Tolkun',
+      phone: '',
       gender: 'Male'
     },
   ];
