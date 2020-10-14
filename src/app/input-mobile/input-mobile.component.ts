@@ -22,8 +22,10 @@ export class InputMobileComponent implements OnInit, ControlValueAccessor {
     this._value = value;
   }
 
-  @Input() inputPlaceholder: string;
+  @Input() placeholder: string;
+
   @Input() inputPattern: string;
+
   disabled: boolean;
 
   constructor() {
