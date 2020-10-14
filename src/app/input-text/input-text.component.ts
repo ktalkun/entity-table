@@ -12,7 +12,7 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
   }]
 })
 export class InputTextComponent implements OnInit, ControlValueAccessor {
-  _value: string;
+  private _value: string;
 
   get value() {
     return this._value;
@@ -28,16 +28,17 @@ export class InputTextComponent implements OnInit, ControlValueAccessor {
 
   disabled: boolean;
 
-  private _onChange: any = (_: string) => {
-  }
-  private _onTouch: any = (_: string) => {
-  };
-
   constructor() {
   }
 
   ngOnInit(): void {
   }
+
+  private _onChange: any = (_: string) => {
+  }
+
+  private _onTouch: any = (_: string) => {
+  };
 
   registerOnChange(fn: any): void {
     this._onChange = fn;
