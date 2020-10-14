@@ -7,6 +7,7 @@ import {InputTextComponent} from './input-text/input-text.component';
 import {FormsModule} from "@angular/forms";
 import {InputMobileComponent} from './input-mobile/input-mobile.component';
 import {ButtonComponent} from './button/button.component';
+import {InputSelectComponent} from './input-select/input-select.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import {ButtonComponent} from './button/button.component';
     TableComponent,
     InputTextComponent,
     InputMobileComponent,
-    ButtonComponent
+    ButtonComponent,
+    InputSelectComponent
   ],
   imports: [
     BrowserModule,
