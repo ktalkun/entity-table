@@ -26,9 +26,10 @@ export class InputTextComponent implements OnInit, ControlValueAccessor {
 
   @Input() placeholder: string;
 
+  disabled: boolean;
+
   private _onChange: any = (_: string) => {
   }
-
   private _onTouch: any = (_: string) => {
   };
 
@@ -44,6 +45,10 @@ export class InputTextComponent implements OnInit, ControlValueAccessor {
 
   registerOnTouched(fn: any): void {
     this._onTouch = fn;
+  }
+
+  setDisabledState(isDisabled: boolean): void {
+    this.disabled = isDisabled;
   }
 
   writeValue(value: any): void {
