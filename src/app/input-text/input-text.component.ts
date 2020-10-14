@@ -24,7 +24,7 @@ export class InputTextComponent implements OnInit, ControlValueAccessor {
     this._onTouch(this._value);
   }
 
-  @Input() inputPlaceholder: string;
+  @Input() placeholder: string;
 
   private _onChange: any = (_: string) => {
   }
