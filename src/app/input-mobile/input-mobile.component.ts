@@ -24,7 +24,7 @@ export class InputMobileComponent implements OnInit, ControlValueAccessor {
 
   @Input() placeholder: string;
 
-  @Input() inputPattern: string;
+  @Input() pattern: string;
 
   disabled: boolean;
 

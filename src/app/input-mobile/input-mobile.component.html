@@ -2,7 +2,7 @@
   [(ngModel)]="value"
   #inputMobile="ngModel"
   type="tel"
-  [pattern]="inputPattern || ''"
+  [pattern]="pattern || ''"
   [placeholder]="placeholder || ''"
   [ngClass]="{'red-border-class': inputMobile.errors?.pattern}"
   [disabled]="disabled"
