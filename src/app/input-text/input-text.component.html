@@ -1,6 +1,6 @@
 <input
-  [(ngModel)]="inputModel"
-  (ngModelChange)="inputModelChange.emit($event)"
+  [(ngModel)]="value"
   type="text"
-  [placeholder]="inputPlaceholder || ''"
+  [placeholder]="placeholder || ''"
+  [disabled]="disabled"
 >
