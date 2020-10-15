@@ -1,1 +1,5 @@
-<p>input-select works!</p>
+<select [(ngModel)]="value" [disabled]="isDisabled">
+  <option *ngFor="let option of options" [value]="option">
+    {{option}}
+  </option>
+</select>
