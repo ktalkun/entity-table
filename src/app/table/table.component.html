@@ -31,7 +31,7 @@
         [ngSwitch]="classCol.type">
       <div *ngSwitchCase="'button'">
         <app-button *ngFor="let action of classCol['actions']"
-                    (click)="action.do(i)">{{action.name}}
+                    (buttonClick)="action.do(i)">{{action.name}}
         </app-button>
       </div>
       <div *ngSwitchCase="'text'">
