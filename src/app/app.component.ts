@@ -45,8 +45,8 @@ export class AppComponent {
         actions: [
           {
             name: 'Del',
-            do: (rowNum: number) => {
-              this.tableData.splice(rowNum, 1);
+            do: (entity: object) => {
+              this.tableData.splice(this.tableData.indexOf(entity), 1);
             }
           }
         ]
