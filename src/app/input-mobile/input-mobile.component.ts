@@ -12,21 +12,23 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
   }]
 })
 export class InputMobileComponent implements OnInit, ControlValueAccessor {
-  private _value: string;
+  private val: string;
 
   get value(): string {
-    return this._value;
+    return this.val;
   }
 
   set value(value: string) {
-    this._value = value;
+    this.val = value;
+    this.onChange(this.val);
+    this.onTouch(this.val);
   }
 
   @Input() placeholder: string;
 
   @Input() pattern: string;
 
-  disabled: boolean;
+  isDisabled: boolean;
 
   constructor() {
   }
@@ -34,25 +36,23 @@ export class InputMobileComponent implements OnInit, ControlValueAccessor {
   ngOnInit(): void {
   }
 
-  private _onChange: any = (_: string) => {
-  };
+  private onChange: Function;
 
-  private _onTouch: any = (_: string) => {
-  };
+  private onTouch: Function;
 
   registerOnChange(fn: any): void {
-    this._onChange = fn;
+    this.onChange = fn;
   }
 
   registerOnTouched(fn: any): void {
-    this._onTouch = fn;
+    this.onTouch = fn;
   }
 
   setDisabledState(isDisabled: boolean): void {
-    this.disabled = isDisabled;
+    this.isDisabled = isDisabled;
   }
 
   writeValue(obj: any): void {
-    this._value = obj;
+    this.val = obj;
   }
 }
