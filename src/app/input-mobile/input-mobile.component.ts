@@ -1,4 +1,4 @@
-import {Component, forwardRef, Input, OnInit} from '@angular/core';
+import {Component, forwardRef, Input} from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 
 @Component({
@@ -11,7 +11,7 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
     multi: true
   }]
 })
-export class InputMobileComponent implements OnInit, ControlValueAccessor {
+export class InputMobileComponent implements ControlValueAccessor {
   private val: string;
 
   get value(): string {
@@ -31,9 +31,6 @@ export class InputMobileComponent implements OnInit, ControlValueAccessor {
   isDisabled: boolean;
 
   constructor() {
-  }
-
-  ngOnInit(): void {
   }
 
   private onChange: Function;
