@@ -14,6 +14,13 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 export class InputSelectComponent implements ControlValueAccessor {
   private val: string;
 
+  @Input() options: Array<string>;
+
+  isDisabled: boolean;
+
+  constructor() {
+  }
+
   get value() {
     return this.val;
   }
@@ -22,13 +29,6 @@ export class InputSelectComponent implements ControlValueAccessor {
     this.val = value;
     this.onChange(this.val);
     this.onTouch(this.val);
-  }
-
-  @Input() options: Array<string>;
-
-  isDisabled: boolean;
-
-  constructor() {
   }
 
   private onChange: Function;
