@@ -26,7 +26,7 @@ export class InputSelectComponent implements OnInit, ControlValueAccessor {
 
   @Input() options: Array<string>;
 
-  @Input("disabled") isDisabled: boolean;
+  isDisabled: boolean;
 
   constructor() {
   }
