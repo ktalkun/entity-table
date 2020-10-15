@@ -14,6 +14,13 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 export class InputTextComponent implements ControlValueAccessor {
   private val: string;
 
+  inputPlaceholder: string;
+
+  isDisabled: boolean;
+
+  constructor() {
+  }
+
   get value() {
     return this.val;
   }
@@ -24,11 +31,13 @@ export class InputTextComponent implements ControlValueAccessor {
     this.onTouch(this.val);
   }
 
-  @Input() placeholder: string;
+  get placeholder() {
+    return this.inputPlaceholder || '';
+  }
 
-  isDisabled: boolean;
-
-  constructor() {
+  @Input()
+  set placeholder(placeholder: string) {
+    this.inputPlaceholder = placeholder;
   }
 
   private onChange: Function;
