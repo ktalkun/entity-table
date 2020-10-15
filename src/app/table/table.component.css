@@ -7,7 +7,7 @@ table {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-table thead tr{
+table thead tr {
   background-color: #009879;
   color: #ffffff;
   text-align: left;
@@ -28,12 +28,4 @@ table tbody tr:nth-of-type(even) {
 
 table tbody tr:last-of-type {
   border-bottom: 2px solid #009879;
-}
-
-button{
-  margin-left: 5px;
-  padding: 5px 10px;
-  border-color: #009879;
-  background: none;
-  border-radius: 20px;
 }

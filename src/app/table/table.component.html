@@ -9,15 +9,30 @@
   </thead>
   <tbody>
   <tr *ngFor="let entity of data, let i = index">
-    <td *ngFor="let entityCol of config['entityCols']">
-      {{entity[entityCol.property]}}
+    <td *ngFor="let entityCol of config['entityCols']"
+        [ngSwitch]="entityCol.type">
+      <app-input-text
+        *ngSwitchCase="'text'"
+        [(ngModel)]="entity[entityCol.property]"
+      ></app-input-text>
+      <app-input-mobile
+        *ngSwitchCase="'tel'"
+        [(ngModel)]="entity[entityCol.property]"
+        [pattern]="'\\+[0-9]{1,3}\\([0-9]{1,4}\\)[0-9]{4,14}'"
+        [placeholder]="'+375(29)3152525'"
+      ></app-input-mobile>
+      <app-input-select
+        *ngSwitchCase="'select'"
+        [(ngModel)]="entity[entityCol.property]"
+        [options]="entityCol.values"
+      ></app-input-select>
     </td>
     <td *ngFor="let classCol of config['classCols']"
         [ngSwitch]="classCol.type">
       <div *ngSwitchCase="'button'">
-        <button *ngFor="let action of classCol['actions']"
-                (click)="action.do(i)">{{action.name}}
-        </button>
+        <app-button *ngFor="let action of classCol['actions']"
+                    (click)="action.do(i)">{{action.name}}
+        </app-button>
       </div>
       <div *ngSwitchCase="'text'">
         <span *ngFor="let text of classCol['values']">{{text}}</span>
