@@ -4,7 +4,7 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 @Component({
   selector: 'app-input-select',
   templateUrl: './input-select.component.html',
-  styleUrls: ['./input-select.component.css'],
+  styleUrls: ['./input-select.component.scss'],
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => InputSelectComponent),

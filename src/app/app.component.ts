@@ -6,7 +6,7 @@ import {ClassColumnType} from "./table/model/class-column-type.model";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   tableSettings: TableConfig = {

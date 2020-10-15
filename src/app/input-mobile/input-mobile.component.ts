@@ -4,7 +4,7 @@ import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 @Component({
   selector: 'app-input-mobile',
   templateUrl: './input-mobile.component.html',
-  styleUrls: ['./input-mobile.component.css'],
+  styleUrls: ['./input-mobile.component.scss'],
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => InputMobileComponent),
