@@ -1,4 +1,10 @@
+@import "mixins";
+
 main {
   display: flex;
   justify-content: center;
+}
+
+app-table {
+  @include global-component;
 }

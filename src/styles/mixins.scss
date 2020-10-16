@@ -1,0 +1,17 @@
+@import "variables";
+
+@mixin input-border() {
+  border: 2px inset $main-color
+}
+
+@mixin input-disabled() {
+  border-color: $main-disabled-color;
+}
+
+@mixin input-error() {
+  border-color: $main-error-color;
+}
+
+@mixin global-component() {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}

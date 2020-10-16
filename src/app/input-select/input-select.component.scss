@@ -1,4 +1,12 @@
+@import "variables";
+@import "mixins";
+
 select {
-  padding: 4px 10px;
-  border: 2px inset #009879;
+  padding: $select-vertical-padding $select-horizontal-padding;
+  background: $input-background-color;
+  @include input-border();
+}
+
+.input-disabled {
+  @include input-disabled();
 }

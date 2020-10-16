@@ -26,6 +26,12 @@
             "styles": [
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles",
+                "src"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -121,10 +127,5 @@
       }
     }
   },
-  "defaultProject": "entity-table",
-  "schematics": {
-    "@schematics/angular:component": {
-      "styleext": "scss"
-    }
-  }
+  "defaultProject": "entity-table"
 }

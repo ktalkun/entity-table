@@ -1,31 +1,29 @@
+@import "variables";
+
+$td-vertical-padding: 12px;
+$td-horizontal-padding: 15px;
+$thead-tr-color: #ffffff;
+
 table {
+  font-size: $main-font-size;
+  font-family: $main-font-family;
   border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 0.9em;
-  font-family: sans-serif;
-  min-width: 400px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
 
-table thead tr {
-  background-color: #009879;
-  color: #ffffff;
-  text-align: left;
-}
+  thead tr {
+    background-color: $main-color;
+    color: $thead-tr-color;
+    text-align: left;
+  }
 
-table th,
-table td {
-  padding: 12px 15px;
-}
+  tbody tr {
+    border-bottom: 1px solid $main-color;
 
-table tbody tr {
-  border-bottom: 1px solid #dddddd;
-}
+    &:last-of-type {
+      border-bottom: 2px solid $main-color;
+    }
+  }
 
-table tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
-}
-
-table tbody tr:last-of-type {
-  border-bottom: 2px solid #009879;
+  td, th {
+    padding: $td-vertical-padding $td-horizontal-padding;
+  }
 }

@@ -1,8 +1,16 @@
+@import "variables";
+@import "mixins";
+
 input {
-  padding: 5px 10px;
-  border-color: #009879;
+  padding: $input-vertical-padding $input-vertical-padding;
+  background: $input-background-color;
+  @include input-border();
 }
 
-.red-border-class {
-  border-color: red;
+.input-disabled {
+  @include input-disabled();
+}
+
+.input-error {
+  @include input-error;
 }
