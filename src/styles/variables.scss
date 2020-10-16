@@ -1,0 +1,11 @@
+$main-color: #009879;
+$main-error-color: #ff0000;
+$main-disabled-color: transparentize($main-color, 0.9);
+$input-background-color: none;
+
+$input-vertical-padding: 5px;
+$input-horizontal-padding: 10px;
+$input-horizontal-margin: 5px;
+
+$select-vertical-padding: $input-vertical-padding - 1;
+$select-horizontal-padding: $input-horizontal-padding;
