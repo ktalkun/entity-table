@@ -14,12 +14,13 @@
       <app-input-text
         *ngSwitchCase="'text'"
         [(ngModel)]="entity[entityCol.property]"
+        [placeholder]="entityCol.placeholder"
       ></app-input-text>
       <app-input-mobile
         *ngSwitchCase="'tel'"
         [(ngModel)]="entity[entityCol.property]"
-        [pattern]="'\\+[0-9]{1,3}\\([0-9]{1,4}\\)[0-9]{4,14}'"
-        [placeholder]="'+375(29)3152525'"
+        [placeholder]="entityCol.placeholder"
+        [pattern]="entityCol.pattern"
       ></app-input-mobile>
       <app-input-select
         *ngSwitchCase="'select'"
@@ -30,8 +31,11 @@
     <td *ngFor="let classCol of config['classCols']"
         [ngSwitch]="classCol.type">
       <div *ngSwitchCase="'button'">
-        <app-button *ngFor="let action of classCol['actions']"
-                    (buttonClick)="action.do(entity)">{{action.name}}
+        <app-button
+          *ngFor="let action of classCol['actions']"
+          (buttonClick)="action.do(entity)"
+        >
+          {{action.name}}
         </app-button>
       </div>
       <div *ngSwitchCase="'text'">
