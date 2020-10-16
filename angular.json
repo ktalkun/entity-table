@@ -121,10 +121,5 @@
       }
     }
   },
-  "defaultProject": "entity-table",
-  "schematics": {
-    "@schematics/angular:component": {
-      "styleext": "scss"
-    }
-  }
+  "defaultProject": "entity-table"
 }
