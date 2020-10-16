@@ -1,11 +1,13 @@
+@import "variables";
+@import "mixins";
+
 button {
-  margin-left: 5px;
-  padding: 5px 10px;
-  border-color: #009879;
-  background: none;
-  border-radius: 20px;
+  margin-left: $input-horizontal-margin;
+  padding: $input-vertical-padding $input-horizontal-padding;
+  background: $input-background-color;
+  @include input-border();
 }
 
-.button-disabled {
-  border-color: #e2e2e2;
+.input-disabled {
+  @include input-disabled();
 }
