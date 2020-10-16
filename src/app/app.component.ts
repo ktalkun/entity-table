@@ -14,17 +14,18 @@ export class AppComponent {
       {
         property: 'name',
         title: 'Name',
-        type: EntityColumnType.Text
+        type: EntityColumnType.Text,
       },
       {
         property: 'surname',
         title: 'Surname',
-        type: EntityColumnType.Text
+        type: EntityColumnType.Text,
       },
       {
         property: 'phone',
         title: 'Phone',
-        type: EntityColumnType.Phone
+        type: EntityColumnType.Phone,
+        pattern: '\\+[0-9]{1,3}\\([0-9]{1,4}\\)[0-9]{4,14}'
       },
       {
         property: 'gender',
@@ -64,6 +65,18 @@ export class AppComponent {
       name: 'Kirill1',
       surname: 'Tolkun',
       phone: '+375293271542',
+      gender: 'Male'
+    },
+    {
+      name: 'Kirill1',
+      surname: 'Tolkun',
+      phone: '',
+      gender: 'Male'
+    },
+    {
+      name: 'Kirill1',
+      surname: 'Tolkun',
+      phone: '',
       gender: 'Male'
     },
     {
