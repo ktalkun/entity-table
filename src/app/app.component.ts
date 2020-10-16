@@ -15,16 +15,19 @@ export class AppComponent {
         property: 'name',
         title: 'Name',
         type: EntityColumnType.Text,
+        placeholder: 'Name'
       },
       {
         property: 'surname',
         title: 'Surname',
         type: EntityColumnType.Text,
+        placeholder: 'Surname'
       },
       {
         property: 'phone',
         title: 'Phone',
         type: EntityColumnType.Phone,
+        placeholder: '+375(29)3152525',
         pattern: '\\+[0-9]{1,3}\\([0-9]{1,4}\\)[0-9]{4,14}'
       },
       {

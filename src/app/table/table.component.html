@@ -14,10 +14,12 @@
       <app-input-text
         *ngSwitchCase="'text'"
         [(ngModel)]="entity[entityCol.property]"
+        [placeholder]="entityCol.placeholder"
       ></app-input-text>
       <app-input-mobile
         *ngSwitchCase="'tel'"
         [(ngModel)]="entity[entityCol.property]"
+        [placeholder]="entityCol.placeholder"
         [pattern]="entityCol.pattern"
       ></app-input-mobile>
       <app-input-select
