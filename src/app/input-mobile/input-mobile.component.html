@@ -4,6 +4,9 @@
   type="tel"
   [pattern]="pattern"
   [placeholder]="placeholder"
-  [ngClass]="{'red-border-class': inputMobile.errors?.pattern}"
+  [ngClass]="{
+  'input-disabled': isDisabled,
+  'input-error': inputMobile.errors?.pattern
+  }"
   [disabled]="isDisabled"
 >
