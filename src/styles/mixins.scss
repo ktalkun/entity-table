@@ -1,0 +1,14 @@
+@import "variables";
+
+@mixin input-border() {
+  border: 2px inset $main-color
+}
+
+@mixin input-disabled() {
+  border-color: $main-disabled-color;
+}
+
+@mixin input-error() {
+  border-color: $main-error-color;
+}
+
