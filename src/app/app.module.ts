@@ -8,6 +8,7 @@ import {FormsModule} from "@angular/forms";
 import {InputMobileComponent} from './input-mobile/input-mobile.component';
 import {ButtonComponent} from './button/button.component';
 import {InputSelectComponent} from './input-select/input-select.component';
+import {MobileValidatorDirective} from './mobile-validator.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {InputSelectComponent} from './input-select/input-select.component';
     InputTextComponent,
     InputMobileComponent,
     ButtonComponent,
-    InputSelectComponent
+    InputSelectComponent,
+    MobileValidatorDirective,
   ],
   imports: [
     BrowserModule,

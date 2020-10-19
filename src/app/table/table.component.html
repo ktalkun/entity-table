@@ -20,7 +20,8 @@
         *ngSwitchCase="'tel'"
         [(ngModel)]="entity[entityCol.property]"
         [placeholder]="entityCol.placeholder"
-        [pattern]="entityCol.pattern"
+        appMobileValidator
+        [mobilePattern]="entityCol.pattern"
       ></app-input-mobile>
       <app-input-select
         *ngSwitchCase="'select'"
