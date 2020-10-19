@@ -2,11 +2,9 @@
   [(ngModel)]="value"
   #inputMobile="ngModel"
   type="tel"
-  [pattern]="pattern"
   [placeholder]="placeholder"
   [ngClass]="{
-  'input-disabled': isDisabled,
-  'input-error': inputMobile.errors?.pattern
+    'input-disabled': isDisabled
   }"
   [disabled]="isDisabled"
 >
