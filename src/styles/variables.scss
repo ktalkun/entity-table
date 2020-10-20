@@ -1,11 +1,14 @@
+// Color variables.
 $main-color: #009879;
 $main-error-color: #ff0000;
 $main-disabled-color: transparentize($main-color, 0.9);
 $input-background-color: none;
 
+// Font variables.
 $main-font-size: 0.9em;
 $main-font-family: sans-serif;
 
+// Padding and margin variables.
 $input-vertical-padding: 5px;
 $input-horizontal-padding: 10px;
 $input-horizontal-margin: 5px;
