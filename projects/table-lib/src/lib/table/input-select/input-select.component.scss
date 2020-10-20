@@ -1,5 +1,5 @@
-@import "variables";
-@import "mixins";
+@import "../../../../../../src/styles/variables";
+@import "../../../../../../src/styles/mixins";
 
 select {
   padding: $select-vertical-padding $select-horizontal-padding;

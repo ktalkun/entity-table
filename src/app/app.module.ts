@@ -2,27 +2,17 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {TableComponent} from './table/table.component';
-import {InputTextComponent} from './input-text/input-text.component';
 import {FormsModule} from "@angular/forms";
-import {InputMobileComponent} from './input-mobile/input-mobile.component';
-import {ButtonComponent} from './button/button.component';
-import {InputSelectComponent} from './input-select/input-select.component';
-import {MobileValidatorDirective} from './mobile-validator.directive';
+import {TableModule} from "table-lib";
 
 @NgModule({
   declarations: [
     AppComponent,
-    TableComponent,
-    InputTextComponent,
-    InputMobileComponent,
-    ButtonComponent,
-    InputSelectComponent,
-    MobileValidatorDirective,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
