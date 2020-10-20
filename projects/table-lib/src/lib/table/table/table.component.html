@@ -11,33 +11,33 @@
   <tr *ngFor="let entity of data, let i = index">
     <td *ngFor="let entityCol of config['entityCols']"
         [ngSwitch]="entityCol.type">
-      <app-input-text
+      <tl-input-text
         *ngSwitchCase="'text'"
         [(ngModel)]="entity[entityCol.property]"
         [placeholder]="entityCol.placeholder"
-      ></app-input-text>
-      <app-input-mobile
+      ></tl-input-text>
+      <tl-input-mobile
         *ngSwitchCase="'tel'"
         [(ngModel)]="entity[entityCol.property]"
         [placeholder]="entityCol.placeholder"
-        appMobileValidator
+        tlMobileValidator
         [mobilePattern]="entityCol.pattern"
-      ></app-input-mobile>
-      <app-input-select
+      ></tl-input-mobile>
+      <tl-input-select
         *ngSwitchCase="'select'"
         [(ngModel)]="entity[entityCol.property]"
         [options]="entityCol.values"
-      ></app-input-select>
+      ></tl-input-select>
     </td>
     <td *ngFor="let classCol of config['classCols']"
         [ngSwitch]="classCol.type">
       <div *ngSwitchCase="'button'">
-        <app-button
+        <tl-button
           *ngFor="let action of classCol['actions']"
           (buttonClick)="action.do(entity)"
         >
           {{action.name}}
-        </app-button>
+        </tl-button>
       </div>
       <div *ngSwitchCase="'text'">
         <span *ngFor="let text of classCol['values']">{{text}}</span>

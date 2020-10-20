@@ -2,7 +2,7 @@ import {Component, forwardRef, Input} from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 
 @Component({
-  selector: 'app-input-select',
+  selector: 'tl-input-select',
   templateUrl: './input-select.component.html',
   styleUrls: ['./input-select.component.scss'],
   providers: [{
