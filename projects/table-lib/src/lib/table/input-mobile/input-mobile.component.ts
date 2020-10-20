@@ -2,26 +2,28 @@ import {Component, forwardRef, Input} from '@angular/core';
 import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
 
 @Component({
-  selector: 'app-input-select',
-  templateUrl: './input-select.component.html',
-  styleUrls: ['./input-select.component.scss'],
+  selector: 'tl-input-mobile',
+  templateUrl: './input-mobile.component.html',
+  styleUrls: ['./input-mobile.component.scss'],
   providers: [{
     provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => InputSelectComponent),
+    useExisting: forwardRef(() => InputMobileComponent),
     multi: true
   }]
 })
-export class InputSelectComponent implements ControlValueAccessor {
+export class InputMobileComponent implements ControlValueAccessor {
   private val: string;
 
-  @Input() options: Array<string>;
+  private inputPlaceholder: string;
+
+  private inputPattern: string;
 
   isDisabled: boolean;
 
   constructor() {
   }
 
-  get value() {
+  get value(): string {
     return this.val;
   }
 
@@ -29,6 +31,24 @@ export class InputSelectComponent implements ControlValueAccessor {
     this.val = value;
     this.onChange(this.val);
     this.onTouch(this.val);
+  }
+
+  get placeholder() {
+    return this.inputPlaceholder || '';
+  }
+
+  @Input()
+  set placeholder(placeholder: string) {
+    this.inputPlaceholder = placeholder;
+  }
+
+  get pattern() {
+    return this.inputPattern || '';
+  }
+
+  @Input()
+  set pattern(pattern: string) {
+    this.inputPattern = pattern;
   }
 
   private onChange: Function;

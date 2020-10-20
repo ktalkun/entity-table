@@ -7,7 +7,7 @@ import {
 } from "@angular/forms";
 
 @Directive({
-  selector: '[appMobileValidator]',
+  selector: '[tlMobileValidator]',
   providers: [{
     provide: NG_VALIDATORS,
     useExisting: MobileValidatorDirective,
