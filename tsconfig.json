@@ -16,7 +16,7 @@
       "dom"
     ],
     "paths": {
-      "table-lib": [
+      "@tolkun/table-lib": [
         "dist/table-lib/table-lib",
         "dist/table-lib"
       ]
