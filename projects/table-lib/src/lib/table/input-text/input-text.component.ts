@@ -57,6 +57,6 @@ export class InputTextComponent implements ControlValueAccessor {
   }
 
   writeValue(obj: any): void {
-    this.val = obj
+    this.val = obj;
   }
 }

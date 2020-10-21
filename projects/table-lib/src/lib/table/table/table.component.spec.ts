@@ -131,9 +131,9 @@ describe('TableComponent', () => {
       name: 'NewName',
       phone: '375(2911)3271542',
       gender: 'Male'
-    })
+    });
     fixture.detectChanges();
-    let numRows: number = debugElement.queryAll(By.css('tbody tr')).length
+    let numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
     expect(numRows).toEqual(4);
   });
 

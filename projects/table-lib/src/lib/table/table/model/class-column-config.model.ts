@@ -6,5 +6,5 @@ export class ClassColumnConfig {
   title: string;
   type: ClassColumnType;
   values?: Array<string>;
-  actions?: Array<EntityAction>
+  actions?: Array<EntityAction>;
 }
