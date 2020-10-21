@@ -65,7 +65,7 @@ class TestComponent {
     ],
   };
 
-  data: Array<Object> = [
+  data: Array<object> = [
     {
       name: 'Kirill',
       phone: '375(2911)3271542',
