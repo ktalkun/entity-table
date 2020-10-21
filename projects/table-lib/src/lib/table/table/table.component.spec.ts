@@ -143,4 +143,11 @@ describe('TableComponent', () => {
     let numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
     expect(numRows).toEqual(2);
   });
+
+  it('should has 2 rows after 1 row removed by action', () => {
+    component.config['classCols'][0].actions[0].do(component.data[0]);
+    fixture.detectChanges();
+    let numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
+    expect(numRows).toEqual(2);
+  });
 });
