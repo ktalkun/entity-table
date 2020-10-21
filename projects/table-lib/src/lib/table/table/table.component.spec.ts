@@ -9,8 +9,9 @@ import {ClassColumnType} from "./model/class-column-type.model";
 import {FormsModule} from "@angular/forms";
 import {MobileValidatorDirective} from "../mobile-validator.directive";
 import {InputTextComponent} from "../input-text/input-text.component";
-import {Component, ElementRef, ViewChild} from "@angular/core";
+import {Component, DebugElement, ViewChild} from "@angular/core";
 import {TableConfig} from "./model/table-config.model";
+import {By} from "@angular/platform-browser";
 
 @Component({
   selector: 'test-table',
@@ -89,6 +90,7 @@ class TestComponent {
 describe('TableComponent', () => {
   let component: TableComponent;
   let fixture: ComponentFixture<TestComponent>;
+  let debugElement: DebugElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -98,7 +100,8 @@ describe('TableComponent', () => {
         InputMobileComponent,
         InputSelectComponent,
         InputTextComponent,
-        MobileValidatorDirective
+        MobileValidatorDirective,
+        TestComponent
       ],
       imports: [
         FormsModule
@@ -111,6 +114,7 @@ describe('TableComponent', () => {
     fixture = TestBed.createComponent(TestComponent);
     fixture.detectChanges();
     component = fixture.componentInstance.tableComponent;
+    debugElement = fixture.debugElement.query(By.directive(TableComponent));
   });
 
   it('should create', () => {
