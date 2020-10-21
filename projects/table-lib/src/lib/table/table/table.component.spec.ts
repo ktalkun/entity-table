@@ -14,7 +14,7 @@ import {TableConfig} from './model/table-config.model';
 import {By} from '@angular/platform-browser';
 
 @Component({
-  selector: 'test-table',
+  selector: 'tl-test-table',
   template: `
     <tl-table #testTable [config]='config' [data]='data'></tl-table>
   `
