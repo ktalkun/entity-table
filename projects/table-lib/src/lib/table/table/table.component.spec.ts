@@ -136,4 +136,11 @@ describe('TableComponent', () => {
     let numRows: number = debugElement.queryAll(By.css('tbody tr')).length
     expect(numRows).toEqual(4);
   });
+
+  it('should has 2 rows after 1 item direct removed', () => {
+    component.data.splice(0, 1);
+    fixture.detectChanges();
+    let numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
+    expect(numRows).toEqual(2);
+  });
 });
