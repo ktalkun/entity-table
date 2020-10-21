@@ -1,4 +1,4 @@
 export class EntityAction {
   name: string;
-  do: (entity: object) => void
+  do: (entity: object) => void;
 }

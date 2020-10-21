@@ -1,5 +1,5 @@
 import {Component, forwardRef, Input} from '@angular/core';
-import {ControlValueAccessor, NG_VALUE_ACCESSOR} from "@angular/forms";
+import {ControlValueAccessor, NG_VALUE_ACCESSOR} from '@angular/forms';
 
 @Component({
   selector: 'tl-input-select',
@@ -21,7 +21,7 @@ export class InputSelectComponent implements ControlValueAccessor {
   constructor() {
   }
 
-  get value() {
+  get value(): string {
     return this.val;
   }
 
@@ -31,9 +31,9 @@ export class InputSelectComponent implements ControlValueAccessor {
     this.onTouch(this.val);
   }
 
-  private onChange: Function;
+  private onChange: (_: string) => void;
 
-  private onTouch: Function;
+  private onTouch: (_: string) => void;
 
   registerOnChange(fn: any): void {
     this.onChange = fn;

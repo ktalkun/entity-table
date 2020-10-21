@@ -1,22 +1,22 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {TableComponent} from './table.component';
-import {InputMobileComponent} from "../input-mobile/input-mobile.component";
-import {InputSelectComponent} from "../input-select/input-select.component";
-import {ButtonComponent} from "../button/button.component";
-import {EntityColumnType} from "./model/entity-column-type.model";
-import {ClassColumnType} from "./model/class-column-type.model";
-import {FormsModule} from "@angular/forms";
-import {MobileValidatorDirective} from "../mobile-validator.directive";
-import {InputTextComponent} from "../input-text/input-text.component";
-import {Component, DebugElement, ViewChild} from "@angular/core";
-import {TableConfig} from "./model/table-config.model";
-import {By} from "@angular/platform-browser";
+import {InputMobileComponent} from '../input-mobile/input-mobile.component';
+import {InputSelectComponent} from '../input-select/input-select.component';
+import {ButtonComponent} from '../button/button.component';
+import {EntityColumnType} from './model/entity-column-type.model';
+import {ClassColumnType} from './model/class-column-type.model';
+import {FormsModule} from '@angular/forms';
+import {MobileValidatorDirective} from '../mobile-validator.directive';
+import {InputTextComponent} from '../input-text/input-text.component';
+import {Component, DebugElement, ViewChild} from '@angular/core';
+import {TableConfig} from './model/table-config.model';
+import {By} from '@angular/platform-browser';
 
 @Component({
-  selector: 'test-table',
+  selector: 'tl-test-table',
   template: `
-    <tl-table #testTable [config]="config" [data]="data"></tl-table>
+    <tl-table #testTable [config]='config' [data]='data'></tl-table>
   `
 })
 class TestComponent {
@@ -65,7 +65,7 @@ class TestComponent {
     ],
   };
 
-  data: Array<Object> = [
+  data: Array<object> = [
     {
       name: 'Kirill',
       phone: '375(2911)3271542',
@@ -122,7 +122,7 @@ describe('TableComponent', () => {
   });
 
   it('should has 3 rows', () => {
-    let numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
+    const numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
     expect(numRows).toEqual(3);
   });
 
@@ -131,23 +131,23 @@ describe('TableComponent', () => {
       name: 'NewName',
       phone: '375(2911)3271542',
       gender: 'Male'
-    })
+    });
     fixture.detectChanges();
-    let numRows: number = debugElement.queryAll(By.css('tbody tr')).length
+    const numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
     expect(numRows).toEqual(4);
   });
 
   it('should has 2 rows after 1 item direct removed', () => {
     component.data.splice(0, 1);
     fixture.detectChanges();
-    let numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
+    const numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
     expect(numRows).toEqual(2);
   });
 
   it('should has 2 rows after 1 row removed by action', () => {
-    component.config['classCols'][0].actions[0].do(component.data[0]);
+    component.config[0].actions[0].do(component.data[0]);
     fixture.detectChanges();
-    let numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
+    const numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
     expect(numRows).toEqual(2);
   });
 });

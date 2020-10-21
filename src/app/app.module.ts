@@ -2,8 +2,8 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {FormsModule} from "@angular/forms";
-import {TableModule} from "@tolkun/table-lib";
+import {FormsModule} from '@angular/forms';
+import {TableModule} from '@tolkun/table-lib';
 
 @NgModule({
   declarations: [

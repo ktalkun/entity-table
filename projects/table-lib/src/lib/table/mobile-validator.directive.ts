@@ -4,7 +4,7 @@ import {
   NG_VALIDATORS,
   ValidationErrors,
   Validator
-} from "@angular/forms";
+} from '@angular/forms';
 
 @Directive({
   selector: '[tlMobileValidator]',
@@ -15,7 +15,7 @@ import {
   }]
 })
 export class MobileValidatorDirective implements Validator {
-  @Input('mobilePattern') mobilePattern: string;
+  @Input() mobilePattern: string;
   private element: ElementRef;
 
   constructor(private el: ElementRef) {
@@ -24,7 +24,7 @@ export class MobileValidatorDirective implements Validator {
 
   validate(control: AbstractControl): ValidationErrors | null {
     if (this.mobilePattern) {
-      let errors: ValidationErrors = this.testValue(control);
+      const errors: ValidationErrors = this.testValue(control);
       if (control.touched || control.dirty) {
         if (errors) {
           this.element.nativeElement.children[0].classList.add('input-error');
