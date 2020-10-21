@@ -121,7 +121,7 @@ describe('TableComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should has 3 items', () => {
+  it('should has 3 rows', () => {
     let numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
     expect(numRows).toEqual(3);
   });
