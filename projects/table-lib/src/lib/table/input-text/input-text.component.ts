@@ -21,7 +21,7 @@ export class InputTextComponent implements ControlValueAccessor {
   constructor() {
   }
 
-  get value() {
+  get value(): string {
     return this.val;
   }
 
@@ -31,7 +31,7 @@ export class InputTextComponent implements ControlValueAccessor {
     this.onTouch(this.val);
   }
 
-  get placeholder() {
+  get placeholder(): string {
     return this.inputPlaceholder || '';
   }
 

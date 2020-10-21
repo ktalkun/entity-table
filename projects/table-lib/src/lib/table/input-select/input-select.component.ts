@@ -21,7 +21,7 @@ export class InputSelectComponent implements ControlValueAccessor {
   constructor() {
   }
 
-  get value() {
+  get value(): string {
     return this.val;
   }
 

@@ -33,7 +33,7 @@ export class InputMobileComponent implements ControlValueAccessor {
     this.onTouch(this.val);
   }
 
-  get placeholder() {
+  get placeholder(): string {
     return this.inputPlaceholder || '';
   }
 
@@ -42,7 +42,7 @@ export class InputMobileComponent implements ControlValueAccessor {
     this.inputPlaceholder = placeholder;
   }
 
-  get pattern() {
+  get pattern(): string {
     return this.inputPattern || '';
   }
 
