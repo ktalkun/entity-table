@@ -1,10 +1,7 @@
 <input
   [(ngModel)]="value"
-  #inputMobile="ngModel"
   type="tel"
   [placeholder]="placeholder"
-  [ngClass]="{
-    'input-disabled': isDisabled
-  }"
+  [ngClass]="{'input-disabled': isDisabled}"
   [disabled]="isDisabled"
 >
