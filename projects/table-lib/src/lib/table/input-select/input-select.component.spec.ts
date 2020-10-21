@@ -1,6 +1,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {InputSelectComponent} from './input-select.component';
+import {FormsModule} from "@angular/forms";
 
 describe('InputSelectComponent', () => {
   let component: InputSelectComponent;
@@ -8,7 +9,8 @@ describe('InputSelectComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [InputSelectComponent]
+      declarations: [InputSelectComponent],
+      imports: [FormsModule]
     })
       .compileComponents();
   });
