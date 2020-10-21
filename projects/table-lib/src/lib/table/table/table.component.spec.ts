@@ -145,7 +145,7 @@ describe('TableComponent', () => {
   });
 
   it('should has 2 rows after 1 row removed by action', () => {
-    component.config[0].actions[0].do(component.data[0]);
+    component.config.classCols[0].actions[0].do(component.data[0]);
     fixture.detectChanges();
     const numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
     expect(numRows).toEqual(2);

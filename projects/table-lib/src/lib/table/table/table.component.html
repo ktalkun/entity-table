@@ -1,15 +1,15 @@
 <table>
   <thead>
   <tr>
-    <th *ngFor="let entityCol of config['entityCols']">
+    <th *ngFor="let entityCol of config.entityCols">
       {{entityCol.title}}
     </th>
-    <th *ngFor="let classCol of config['classCols']">{{classCol.title}}</th>
+    <th *ngFor="let classCol of config.entityCols">{{classCol.title}}</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let entity of data, let i = index">
-    <td *ngFor="let entityCol of config['entityCols']"
+    <td *ngFor="let entityCol of config.entityCols"
         [ngSwitch]="entityCol.type">
       <tl-input-text
         *ngSwitchCase="entityColumnType.Text"
@@ -29,11 +29,11 @@
         [options]="entityCol.values"
       ></tl-input-select>
     </td>
-    <td *ngFor="let classCol of config['classCols']"
+    <td *ngFor="let classCol of config.classCols"
         [ngSwitch]="classCol.type">
       <div *ngSwitchCase="classColumnType.Button">
         <tl-button
-          *ngFor="let action of classCol['actions']"
+          *ngFor="let action of classCol.actions"
           (buttonClick)="action.do(entity)"
         >
           {{action.name}}
