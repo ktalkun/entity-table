@@ -125,4 +125,15 @@ describe('TableComponent', () => {
     let numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
     expect(numRows).toEqual(3);
   });
+
+  it('should has 4 rows after 1 item added', () => {
+    component.data.push({
+      name: 'NewName',
+      phone: '375(2911)3271542',
+      gender: 'Male'
+    })
+    fixture.detectChanges();
+    let numRows: number = debugElement.queryAll(By.css('tbody tr')).length
+    expect(numRows).toEqual(4);
+  });
 });
