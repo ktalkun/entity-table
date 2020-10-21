@@ -14,12 +14,12 @@
       <tl-input-text
         *ngSwitchCase="entityColumnType.Text"
         [(ngModel)]="entity[entityCol.property]"
-        [placeholder]="entityCol.placeholder"
+        [inputPlaceholder]="entityCol.placeholder"
       ></tl-input-text>
       <tl-input-mobile
         *ngSwitchCase="entityColumnType.Phone"
         [(ngModel)]="entity[entityCol.property]"
-        [placeholder]="entityCol.placeholder"
+        [inputPlaceholder]="entityCol.placeholder"
         tlMobileValidator
         [mobilePattern]="entityCol.pattern"
       ></tl-input-mobile>

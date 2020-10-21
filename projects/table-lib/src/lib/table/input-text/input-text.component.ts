@@ -35,7 +35,7 @@ export class InputTextComponent implements ControlValueAccessor {
     return this.inputPlaceholder || '';
   }
 
-  @Input()
+  @Input('inputPlaceholder')
   set placeholder(placeholder: string) {
     this.inputPlaceholder = placeholder;
   }
