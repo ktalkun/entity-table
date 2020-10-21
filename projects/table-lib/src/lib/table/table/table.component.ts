@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
-import {EntityColumnType} from "./model/entity-column-type.model";
-import {ClassColumnType} from "./model/class-column-type.model";
+import {EntityColumnType} from './model/entity-column-type.model';
+import {ClassColumnType} from './model/class-column-type.model';
 
 @Component({
   selector: 'tl-table',

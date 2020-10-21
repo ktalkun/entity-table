@@ -1,6 +1,6 @@
 import {TestBed} from '@angular/core/testing';
 import {AppComponent} from './app.component';
-import {TableModule} from "@tolkun/table-lib";
+import {TableModule} from '@tolkun/table-lib';
 
 describe('AppComponent', () => {
   beforeEach(async () => {

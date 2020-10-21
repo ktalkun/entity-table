@@ -1,4 +1,4 @@
-import {EntityColumnType} from "./entity-column-type.model";
+import {EntityColumnType} from './entity-column-type.model';
 
 export class EntityColumnConfig {
   property: string;

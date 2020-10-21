@@ -1,22 +1,22 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {TableComponent} from './table.component';
-import {InputMobileComponent} from "../input-mobile/input-mobile.component";
-import {InputSelectComponent} from "../input-select/input-select.component";
-import {ButtonComponent} from "../button/button.component";
-import {EntityColumnType} from "./model/entity-column-type.model";
-import {ClassColumnType} from "./model/class-column-type.model";
-import {FormsModule} from "@angular/forms";
-import {MobileValidatorDirective} from "../mobile-validator.directive";
-import {InputTextComponent} from "../input-text/input-text.component";
-import {Component, DebugElement, ViewChild} from "@angular/core";
-import {TableConfig} from "./model/table-config.model";
-import {By} from "@angular/platform-browser";
+import {InputMobileComponent} from '../input-mobile/input-mobile.component';
+import {InputSelectComponent} from '../input-select/input-select.component';
+import {ButtonComponent} from '../button/button.component';
+import {EntityColumnType} from './model/entity-column-type.model';
+import {ClassColumnType} from './model/class-column-type.model';
+import {FormsModule} from '@angular/forms';
+import {MobileValidatorDirective} from '../mobile-validator.directive';
+import {InputTextComponent} from '../input-text/input-text.component';
+import {Component, DebugElement, ViewChild} from '@angular/core';
+import {TableConfig} from './model/table-config.model';
+import {By} from '@angular/platform-browser';
 
 @Component({
   selector: 'test-table',
   template: `
-    <tl-table #testTable [config]="config" [data]="data"></tl-table>
+    <tl-table #testTable [config]='config' [data]='data'></tl-table>
   `
 })
 class TestComponent {

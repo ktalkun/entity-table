@@ -4,7 +4,7 @@ import {
   NG_VALIDATORS,
   ValidationErrors,
   Validator
-} from "@angular/forms";
+} from '@angular/forms';
 
 @Directive({
   selector: '[tlMobileValidator]',

@@ -1,5 +1,5 @@
 import {MobileValidatorDirective} from './mobile-validator.directive';
-import {ElementRef} from "@angular/core";
+import {ElementRef} from '@angular/core';
 
 describe('MobileValidatorDirective', () => {
   it('should create an instance', () => {

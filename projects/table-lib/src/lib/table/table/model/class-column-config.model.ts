@@ -1,5 +1,5 @@
-import {ClassColumnType} from "./class-column-type.model";
-import {EntityAction} from "./entity-action.model";
+import {ClassColumnType} from './class-column-type.model';
+import {EntityAction} from './entity-action.model';
 
 export class ClassColumnConfig {
   property: string;

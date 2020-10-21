@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
-import {TableConfig} from "../../projects/table-lib/src/lib/table/table/model/table-config.model";
-import {EntityColumnType} from "../../projects/table-lib/src/lib/table/table/model/entity-column-type.model";
-import {ClassColumnType} from "../../projects/table-lib/src/lib/table/table/model/class-column-type.model";
+import {TableConfig} from '../../projects/table-lib/src/lib/table/table/model/table-config.model';
+import {EntityColumnType} from '../../projects/table-lib/src/lib/table/table/model/entity-column-type.model';
+import {ClassColumnType} from '../../projects/table-lib/src/lib/table/table/model/class-column-type.model';
 
 @Component({
   selector: 'app-root',
