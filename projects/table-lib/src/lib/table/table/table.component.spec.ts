@@ -122,7 +122,7 @@ describe('TableComponent', () => {
   });
 
   it('should has 3 rows', () => {
-    let numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
+    const numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
     expect(numRows).toEqual(3);
   });
 
@@ -133,21 +133,21 @@ describe('TableComponent', () => {
       gender: 'Male'
     });
     fixture.detectChanges();
-    let numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
+    const numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
     expect(numRows).toEqual(4);
   });
 
   it('should has 2 rows after 1 item direct removed', () => {
     component.data.splice(0, 1);
     fixture.detectChanges();
-    let numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
+    const numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
     expect(numRows).toEqual(2);
   });
 
   it('should has 2 rows after 1 row removed by action', () => {
     component.config['classCols'][0].actions[0].do(component.data[0]);
     fixture.detectChanges();
-    let numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
+    const numRows: number = debugElement.queryAll(By.css('tbody tr')).length;
     expect(numRows).toEqual(2);
   });
 });
