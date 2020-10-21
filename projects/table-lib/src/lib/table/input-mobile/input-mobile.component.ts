@@ -51,9 +51,9 @@ export class InputMobileComponent implements ControlValueAccessor {
     this.inputPattern = pattern;
   }
 
-  private onChange: Function;
+  private onChange: (_: string) => void;
 
-  private onTouch: Function;
+  private onTouch: (_: string) => void;
 
   registerOnChange(fn: any): void {
     this.onChange = fn;

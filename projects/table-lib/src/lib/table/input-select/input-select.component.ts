@@ -31,9 +31,9 @@ export class InputSelectComponent implements ControlValueAccessor {
     this.onTouch(this.val);
   }
 
-  private onChange: Function;
+  private onChange: (_: string) => void;
 
-  private onTouch: Function;
+  private onTouch: (_: string) => void;
 
   registerOnChange(fn: any): void {
     this.onChange = fn;

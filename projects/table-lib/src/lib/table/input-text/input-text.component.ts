@@ -40,9 +40,9 @@ export class InputTextComponent implements ControlValueAccessor {
     this.inputPlaceholder = placeholder;
   }
 
-  private onChange: Function;
+  private onChange: (_: string) => void;
 
-  private onTouch: Function;
+  private onTouch: (_: string) => void;
 
   registerOnChange(fn: any): void {
     this.onChange = fn;
