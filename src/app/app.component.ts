@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {TableConfig} from '../../projects/table-lib/src/lib/table/table/model/table-config.model';
 import {EntityColumnType} from '../../projects/table-lib/src/lib/table/table/model/entity-column-type.model';
 import {ClassColumnType} from '../../projects/table-lib/src/lib/table/table/model/class-column-type.model';
+import {environment} from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,8 @@ import {ClassColumnType} from '../../projects/table-lib/src/lib/table/table/mode
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  buildType: string = environment.buildType;
+
   tableSettings: TableConfig = {
     entityCols: [
       {
