@@ -62,6 +62,30 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "dev": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ]
+            },
+            "sit": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.sit.ts"
+                }
+              ]
+            },
+            "uat": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.uat.ts"
+                }
+              ]
             }
           }
         },
@@ -73,6 +97,15 @@
           "configurations": {
             "production": {
               "browserTarget": "entity-table:build:production"
+            },
+            "dev": {
+              "browserTarget": "entity-table:build:dev"
+            },
+            "sit": {
+              "browserTarget": "entity-table:build:sit"
+            },
+            "uat": {
+              "browserTarget": "entity-table:build:uat"
             }
           }
         },
