@@ -3,9 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "dev": "ng serve -o",
     "start": "ng serve",
     "build": "ng build",
+    "dev": "ng dev",
+    "sit": "ng sit",
+    "uat": "ng uat",
+    "prod": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
