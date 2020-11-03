@@ -16,10 +16,8 @@ import {
 })
 export class MobileValidatorDirective implements Validator {
   @Input() mobilePattern: string;
-  private element: ElementRef;
 
-  constructor(private el: ElementRef) {
-    this.element = el;
+  constructor(private element: ElementRef) {
   }
 
   validate(control: AbstractControl): ValidationErrors | null {
