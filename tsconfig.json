@@ -20,6 +20,8 @@
         "dist/table-lib/table-lib",
         "dist/table-lib"
       ]
-    }
+    },
+    "noUnusedParameters": true,
+    "noUnusedLocals": true
   }
 }
